@@ -1,2 +1,2 @@
 #! /bin/bash
-Rscript app.R
+Rscript abcdefgh/app.R
