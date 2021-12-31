@@ -88,7 +88,7 @@
                 (method git-fetch)
                 (uri (git-reference
                       (url "git://github.com/mbcladwell/shinyln.git")
-                      (commit "48735f7c4046cbf21c53a4745521ad37158666f5")))
+                      (commit "ff5a0aabe98644672dce6c8cd68a577a16e8e6e9")))
                 (sha256 (base32 "13rx26q1dc92nilarmrjc27qmhrjwamf4yzxrx1aqjg1955nk6p4"))
                ;; (file-name (git-file-name name version))
 		))
@@ -96,7 +96,7 @@
   (arguments `(	#:phases (modify-phases %standard-phases
 					(add-after 'unpack 'patch-prefix
 						   (lambda* (#:key inputs outputs #:allow-other-keys)
-						     (substitute* "./shinyln.sh"
+						     (substitute* "./scripts/shinyln.sh"
 								  (("abcdefgh")
 								   (assoc-ref outputs "out" )) )
 						     #t))
