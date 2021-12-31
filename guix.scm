@@ -88,8 +88,8 @@
                 (method git-fetch)
                 (uri (git-reference
                       (url "git://github.com/mbcladwell/shinyln.git")
-                      (commit "ff5a0aabe98644672dce6c8cd68a577a16e8e6e9")))
-                (sha256 (base32 "13rx26q1dc92nilarmrjc27qmhrjwamf4yzxrx1aqjg1955nk6p4"))
+                      (commit "b7429f1216d19932b5d8486861e07fe346bf4035")))
+                (sha256 (base32 "0y8hl17igar3niq14pmb78iiqp0as51jhiq1qxjlkxqsgq6lm9pk"))
                ;; (file-name (git-file-name name version))
 		))
   (build-system gnu-build-system)

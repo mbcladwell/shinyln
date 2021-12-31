@@ -19,9 +19,8 @@ library(ggplot2)
           dbname = "klohymim",
           host = "raja.db.elephantsql.com",
           user = "klohymim",
-          password = "hwc3v4_rbkT-1EL2KI-JBaqFq0thCXM_",
+          password = "hwc3v4_rbkT-1EL2KI-JBaqFq0thCXM_"
         
- 
         )
 
         values <- reactiveValues()
