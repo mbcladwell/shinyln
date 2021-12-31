@@ -27,7 +27,7 @@ library(ggplot2)
         values <- reactiveValues()
         values$ar_id <- 1
         
-# Define UI for application that draws a histogram
+## Define UI for application that draws a histogram
 ui <- fluidPage(
    
    # Application title
