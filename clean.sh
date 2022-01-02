@@ -14,11 +14,11 @@ hall init --convert --author "mbc" shinyln --execute
 hall scan -x
 hall build -x
 cp /home/mbc/syncd/tobedeleted/shinyln/guix.scm .
-cp /home/mbc/syncd/tobedeleted/shinyln/*.sh ./scripts
+cp /home/mbc/syncd/tobedeleted/shinyln/shinyln.sh ./scripts
 
 autoreconf -vif && ./configure && make
 cp /home/mbc/syncd/tobedeleted/shinyln/Makefile.am .
-make dist
+##make dist
 
 git add .
 git commit -am "changes"

@@ -3,7 +3,7 @@ dnl -*- Autoconf -*-
 AC_INIT(shinyln, 0.1)
 AC_SUBST(HVERSION, "\"0.1\"")
 AC_SUBST(AUTHOR, "\"mbc\"")
-AC_SUBST(COPYRIGHT, "'(2021)")
+AC_SUBST(COPYRIGHT, "'(2022)")
 AC_SUBST(LICENSE, gpl3+)
 AC_CONFIG_SRCDIR(shinyln.scm)
 AC_CONFIG_AUX_DIR([build-aux])

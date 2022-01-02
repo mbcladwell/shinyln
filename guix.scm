@@ -43,7 +43,9 @@
   #:use-module (gnu packages graph)
   #:use-module (gnu packages gtk)
    #:use-module  (gnu packages guile)
-  #:use-module (gnu packages guile-xyz)
+   #:use-module (gnu packages guile-xyz)
+   #:use-module (gnu packages haskell-xyz)
+   
   #:use-module (gnu packages icu4c)
   #:use-module (gnu packages image)
   #:use-module (gnu packages imagemagick)
@@ -88,8 +90,8 @@
                 (method git-fetch)
                 (uri (git-reference
                       (url "git://github.com/mbcladwell/shinyln.git")
-                      (commit "b7429f1216d19932b5d8486861e07fe346bf4035")))
-                (sha256 (base32 "0y8hl17igar3niq14pmb78iiqp0as51jhiq1qxjlkxqsgq6lm9pk"))
+                      (commit "18a88fb0ca871ae3bab693f9fb384328f90c8844")))
+                (sha256 (base32 "0zq216apqdb3d97vprr7z5hl66ab4al95iavsr14n32p2954sfw2"))
                ;; (file-name (git-file-name name version))
 		))
   (build-system gnu-build-system)
@@ -127,13 +129,22 @@
       ("pkg-config" ,pkg-config)
       ("texinfo" ,texinfo)))
   (inputs `(("guile" ,guile-3.0)
-	    ("r-dbi" ,r-dbi)
-	    ("r-pool" ,r-pool)
-	    ("r-ggplot2" ,r-ggplot2)	
+	   
+	   
+	    
 	    ))
   (propagated-inputs `(
 		       ("r-shiny" ,r-shiny)
-		     	       
+		       ("r-rpostgresql" ,r-rpostgresql)
+		        ("r-ggplot2" ,r-ggplot2)
+		        ("r-dbi" ,r-dbi)
+			("r-pool" ,r-pool)
+			("r-dt" ,r-dt)
+			("r" ,r)
+			("postgresql" ,postgresql)
+			("libpqxx" ,libpqxx)
+			("uglify-js" ,r-uglify-js)
+			("ghc-postgresql-libpq" ,ghc-postgresql-libpq)
 		       ))
   (synopsis "")
   (description "")
