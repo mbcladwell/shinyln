@@ -90,7 +90,7 @@
                 (method git-fetch)
                 (uri (git-reference
                       (url "git://github.com/mbcladwell/shinyln.git")
-                      (commit "18a88fb0ca871ae3bab693f9fb384328f90c8844")))
+                      (commit "362f4af9ca55e127cfaae67419aec073188220c2")))
                 (sha256 (base32 "0zq216apqdb3d97vprr7z5hl66ab4al95iavsr14n32p2954sfw2"))
                ;; (file-name (git-file-name name version))
 		))
@@ -143,7 +143,7 @@
 			("r" ,r)
 			("postgresql" ,postgresql)
 			("libpqxx" ,libpqxx)
-			("uglify-js" ,r-uglify-js)
+			;;("uglify-js" ,r-uglify-js)
 			("ghc-postgresql-libpq" ,ghc-postgresql-libpq)
 		       ))
   (synopsis "")

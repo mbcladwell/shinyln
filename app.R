@@ -15,7 +15,7 @@ library(pool)
 library(ggplot2)
         
         pool <- dbPool(
-          drv = RPostgres::Postgres(),
+          drv = RPostgreSQL::PostgreSQL(),
           dbname = "klohymim",
           host = "raja.db.elephantsql.com",
           user = "klohymim",
