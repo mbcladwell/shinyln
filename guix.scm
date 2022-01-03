@@ -106,14 +106,14 @@
 					(add-before 'install 'copy-app
 						    (lambda* (#:key outputs #:allow-other-keys)
 						      (let* ((out  (assoc-ref outputs "out")))
-							     (install-file "app.R" out)     			     	     
+							     (install-file "./app.R" out)     			     	     
 							     #t)))
 					(add-before 'install 'copy-executable
 						    (lambda* (#:key outputs #:allow-other-keys)
 						      (let* ((out  (assoc-ref outputs "out"))
 							     (bin-dir (string-append out "/bin"))	    							     
 							     )            				       
-							(install-file "scripts/shinyln.sh" bin-dir)
+							(install-file "./scripts/shinyln.sh" bin-dir)
 							#t)))
 					(add-after 'install 'wrap-shinyln
 						   (lambda* (#:key inputs outputs #:allow-other-keys)
@@ -143,7 +143,7 @@
 			("r-dt" ,r-dt)
 			("r" ,r)
 			("postgresql" ,postgresql)
-			("libpqxx" ,libpqxx)
+			;;("libpqxx" ,libpqxx)
 			;;("uglify-js" ,r-uglify-js)
 			;;("ghc-postgresql-libpq" ,ghc-postgresql-libpq)
 		       ))
