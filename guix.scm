@@ -90,8 +90,9 @@
                 (method git-fetch)
                 (uri (git-reference
                       (url "git://github.com/mbcladwell/shinyln.git")
-                      (commit "362f4af9ca55e127cfaae67419aec073188220c2")))
-                (sha256 (base32 "0zq216apqdb3d97vprr7z5hl66ab4al95iavsr14n32p2954sfw2"))
+                      (commit "6debcfd6662e62aed4b2943bb826e478824de800")))
+                (sha256 (base32 "0qn85c11r6x8kxmwm5rinw1fjbv82vmanfp2gl2a7c4sb4mzjlmn"))
+		;; 0qn85c11r6x8kxmwm5rinw1fjbv82vmanfp2gl2a7c4sb4mzjlmn
                ;; (file-name (git-file-name name version))
 		))
   (build-system gnu-build-system)
@@ -144,7 +145,7 @@
 			("postgresql" ,postgresql)
 			("libpqxx" ,libpqxx)
 			;;("uglify-js" ,r-uglify-js)
-			("ghc-postgresql-libpq" ,ghc-postgresql-libpq)
+			;;("ghc-postgresql-libpq" ,ghc-postgresql-libpq)
 		       ))
   (synopsis "")
   (description "")
