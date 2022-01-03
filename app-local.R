@@ -9,24 +9,19 @@
 # http://zevross.com/blog/2016/04/19/r-powered-web-applications-with-shiny-a-tutorial-and-cheat-sheet-with-40-example-apps/
 
 
-library(shiny)
-library(DBI)
+library(shiny) r-shiny
+library(DBI)  r-dbi
 library(pool)
 library(ggplot2)
         
         pool <- dbPool(
-          drv = RPostgres::Postgres(),
-          dbname = "klohymim",
+          drv = RPostgreSQL::PostgreSQL(),
+         ## drv = RPostgres::Postgres(),
+          dbname = "myomim",
           host = "raja.db.elephantsql.com",
-          user = "klohymim",
-          password = "hwc3v4_rbkT-1EL2KI-JBaqFq0thCXM_",
+          user = "myomim",
+          password = "hwc3v4_rbkT-4YGHio-JBaqFq0thCXM_"
         
-      ##    dbname = "lndb",
-      ##    host = "192.168.1.11",
-      ##    user = "ln_admin",
-      ##    password = "welcome",
-      
-          bigint = c("integer64", "integer", "numeric", "character")
         )
 
         values <- reactiveValues()
@@ -181,5 +176,7 @@ updateTabsetPanel(session, "maintabs", selected = "tab3")
 }
 
 # Run the application 
-shinyApp(ui = ui, server = server)
+#shinyApp(ui = ui, server = server)
+app <- shinyApp(ui = ui, server = server)
+runApp(app, host="0.0.0.0", port=3300)
 
